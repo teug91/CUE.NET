@@ -296,6 +296,14 @@ namespace CUE.NET
             IsInitialized = true;
         }
 
+        /// <summary>
+        /// Returns number of connected Corsair devices that support lighting control.
+        /// </summary>
+        public static int CorsairGetDeviceCount()
+        {
+            return _CUESDK.CorsairGetDeviceCount();
+        }
+
         private static void Throw(CorsairError error, bool reset)
         {
             if (reset)
